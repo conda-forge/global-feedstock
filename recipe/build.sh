@@ -2,6 +2,11 @@
 
 set -o xtrace -o nounset -o pipefail -o errexit
 
+if [[ ${CONDA_BUILD_CROSS_COMPILATION:-0} == 1 ]]; then
+    echo ac_cv_posix1_2008_realpath=yes > ${SRC_DIR}/config.site
+    export CONFIG_SITE=${SRC_DIR}/config.site
+fi
+
 ./configure --disable-debug \
     --disable-dependency-tracking \
     --prefix=${PREFIX} \
