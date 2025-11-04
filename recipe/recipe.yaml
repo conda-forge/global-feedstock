@@ -1,5 +1,5 @@
 context:
-  version: 6.6.12
+  version: "6.6.13"
 
 package:
   name: global
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/global/global-${{ version }}.tar.gz
-  sha256: 542a5b06840e14eca548b4bb60b44c0adcf01024e68eb362f8bf716007885901
+  sha256: 945f349730da01f77854d9811ca8f801669c9461395a29966d8d88cb6703347b
 
 build:
   number: 0
